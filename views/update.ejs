@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <style>
+            input {
+                width: 500px;
+                font-size: 24px;
+            }
+        </style>
+    </head>
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+  ID<br/>
+  <input type="text" class='form' value="<%= _id %>" />
+  <br />
+  
+  Name<br>
+  <input type="text" class='form' value="<%= name %>" />
+  <br>
+   Price<br>
+  <input type="text" class='form2' value="<%= price %>"/>
+  <br>
+  Image<br />
+  <input type="text" class='form3' value="<%= img %>"/>
+  <br />
+  Category<br />
+  <input type="text" class='form4'  value="<%= category %>"/>
+  <hr>
+  <button class="send">Send Menu</button>
+   
+<script>
+
+$(document).ready(function(){
+    
+
+    $(".send").click(function(){
+        
+        var val1 = $('.form').val();
+        var val2 = $('.form2').val();
+        var val3 = $('.form3').val();
+        var val4 = $('.form4').val();
+         
+        var o = {
+            name: val1,
+            price: val2,
+            img: val3,
+            category: val4
+        };
+        
+        makeRequest( o );
+        
+    });
+
+    function makeRequest(data){
+        
+        console.log(data);
+        
+        $.post("/update", data, (results) =>{
+           console.log(results); 
+           
+        });
+        
+    }
+
+});
+</script>
+</body>
+</html>

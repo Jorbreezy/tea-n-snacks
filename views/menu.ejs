@@ -1,0 +1,83 @@
+<% include ./header.ejs %>
+<link rel="stylesheet" type="text/css" href='/css/menu.css'>
+<script src="https://code.jquery.com/jquery.min.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<body onload="init()">
+  <div class="container-fluid">
+
+    <div class='row'>
+      <div class="col-sm-12 col-md-12 col-lg-12">
+        <center /><h2 class='marg'>Combos</h2><hr />
+      </div>
+      <div class="row">
+        <div id='Combos'></div>
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-12 col-lg-12">
+      <center /><h2 class='marg'>Snacks</h2><hr />
+    </div>
+    <div class="row">
+      <div id='Snacks'></div>
+    </div>
+    <div class="col-sm-12 col-md-12 col-lg-12">
+      <center /><h2 class='marg'>Bubble Tea</h2><hr />
+    </div>
+    <div class="row">
+      <div id='BubbleTea'></div>
+    </div>
+    <div class="col-sm-12 col-md-12 col-lg-12">
+      <center /><h2 class='marg'>Ice Tea</h2><hr />
+    </div>
+    <div class="row">
+      <div id='IceTea'></div>
+    </div>
+    <div class="col-sm-12 col-md-12 col-lg-12">
+      <center /><h2 class='marg'>Green Tea</h2><hr />
+    </div>
+    <div class="row">
+      <div id='GreenTea'></div>
+    </div>
+    <div class="col-sm-12 col-md-12 col-lg-12">
+      <center /><h2 class='marg'>Specialty</h2><hr />
+    </div>
+    <div class="row">
+      <div id='Specialty'></div>
+    </div>
+  </div>
+  <div class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        </div>
+        <br /> 
+       <center><div class="modal-image">
+
+         </div>
+        <div class="modal-body">
+          <div id='name'>
+
+          </div>
+          <div id='price'>
+            
+          </div>
+         </div></center>
+        <div class='btnP'>
+          <center> <button type="button" class="minus btn btn-default btn-number" data-type='plus'><span class="glyphicon glyphicon-minus"></span></button>
+            <input type="hidden" class="dataId" />
+            <input class='money'/>
+            <input class='quantity' value="1" disabled/>
+            <button type="button" class="plus btn btn-default btn-number" data-type='plus'><span class="glyphicon glyphicon-plus"></span></button></center>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn2 btn-danger" data-dismiss="modal">Remove</button>
+          <button type="button" class="btn btn1 btn-primary">Add To Cart</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+</body>
+<script src="js/menu.js"></script>
+
+<% include ./footer.ejs %>
